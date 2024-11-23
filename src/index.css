@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-bg: #2c3e50;
+  --sidebar-hover: #34495e;
+  --header-bg: #3498db;
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  min-height: 100vh;
+  width: 250px;
+}
+
+.sidebar-link {
+  @apply flex items-center px-4 py-3 text-gray-300 hover:bg-opacity-25 hover:text-white transition-colors duration-200;
+}
+
+.sidebar-link:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.sidebar-link.active {
+  @apply bg-blue-600 text-white;
+}
+
+.top-header {
+  background-color: var(--header-bg);
+}
+
+.content-card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.stat-card {
+  @apply bg-white rounded-lg shadow-sm p-4 flex items-center justify-between;
+}
+
+.input-search {
+  @apply w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200;
+}
+
+.data-table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.data-table th {
+  @apply px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.data-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.form-input {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50;
+}
